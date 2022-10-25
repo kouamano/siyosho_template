@@ -6,7 +6,11 @@ kigen="2023年3月31日(金)"
 ##本文
 echo ""
 echo $title
+echo "仕様書"
+echo "国立情報学研究所"
 echo ""
+
+echo "TODO: セクション区切りを挿入タイトル部をセンタリング"
 
 echo ""
 echo I. 一般事項
