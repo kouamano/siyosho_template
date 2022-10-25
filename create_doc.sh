@@ -4,6 +4,6 @@ date=`date "+%Y_%m%d"`
 echo $date
 textfile=${date}.tmp
 
-./spec_main > $textfile
+./spec_Main > $textfile
 python create_doc.py
 
