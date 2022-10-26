@@ -13,7 +13,7 @@ echo ""
 
 echo $section
 
-echo "TODO: セクション区切りを挿入し、タイトル部をセンタリング"
+echo "TODO: タイトル部をセンタリングし、この文を削除"
 
 echo ""
 echo I. 一般事項
