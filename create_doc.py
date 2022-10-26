@@ -21,6 +21,9 @@ ToDate.text = str(TodayDate) + '\n' + RCOSID
 ToDate.alignment = WD_TAB_ALIGNMENT.RIGHT
 
 doc.add_paragraph('')
-doc.add_paragraph(textdata)
+sections = textdata.split('(\S)')
+for item in sections:
+  doc.add_paragraph(item)
+#doc.add_paragraph(sections[0])
 
 doc.save(filename)
