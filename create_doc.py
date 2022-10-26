@@ -8,6 +8,8 @@ TodayDate = now_time.strftime('%Y/%m/%d')
 TodayFile = now_time.strftime('%Y_%m%d' + '.tmp')
 filename = now_time.strftime('%Y_%m%d' + '.docx')
 
+section_delimiter = '(\S)'
+
 f = open(TodayFile,'r')
 textdata = f.read()
 f.close()
@@ -21,7 +23,7 @@ ToDate.text = str(TodayDate) + '\n' + RCOSID
 ToDate.alignment = WD_TAB_ALIGNMENT.RIGHT
 
 doc.add_paragraph('')
-sections = textdata.split('(\S)')
+sections = textdata.split(section_delimiter)
 for item in sections:
   doc.add_paragraph(item)
 #doc.add_paragraph(sections[0])

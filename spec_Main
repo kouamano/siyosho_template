@@ -2,6 +2,7 @@
 ##変数
 title="タイトル"
 kigen="2023年3月31日(金)"
+section="(\S)"
 
 ##本文
 echo ""
@@ -10,7 +11,7 @@ echo "仕様書"
 echo "国立情報学研究所"
 echo ""
 
-echo "(\S)"
+echo $section
 
 echo "TODO: セクション区切りを挿入し、タイトル部をセンタリング"
 
