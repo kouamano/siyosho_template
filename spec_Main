@@ -59,7 +59,7 @@ echo 10. 注意事項
 cat spec_tyuui
 
 echo ""
-echo II. 業務仕様
+echo II. 詳細仕様
 
 echo 1. 概要
 cat spec_gyoumu_gaiyou
