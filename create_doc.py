@@ -1,5 +1,5 @@
 from docx import Document
-from docx.enum.text import WD_TAB_ALIGNMENT, WD_COLOR_INDEX
+from docx.enum.text import WD_TAB_ALIGNMENT, WD_COLOR_INDEX, WD_ALIGN_PARAGRAPH
 from docx.shared import Pt
 import datetime
 
@@ -27,5 +27,6 @@ sections = textdata.split(section_delimiter)
 for item in sections:
   doc.add_paragraph(item)
 #doc.add_paragraph(sections[0])
+doc.paragraphs[1].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
 doc.save(filename)
