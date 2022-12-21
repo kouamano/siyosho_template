@@ -12,75 +12,73 @@ echo "国立情報学研究所"
 echo ""
 
 echo $section
-
 echo "TODO: タイトル部をセンタリングし、この文を削除"
 
-echo ""
+echo $section
 echo I. 一般事項
 
-echo 1. 件名
+echo -n $section
+echo -n "1. 件名"
+echo -n $section
 echo "　$title"
 
-echo ""
 echo 2. 実施目的
 cat spec_mokuteki
 
-echo ""
 echo 3. 納品期限
-echo "　$kigen"
 #echo 3. 業務期間
+echo "　$kigen"
 
-echo ""
 echo 4. 納品物
 cat spec_nouhin
 
-echo ""
 echo 5. 要求仕様
 echo "　受注者は「II. 詳細仕様」に記載した業務を行うこと。"
 
-echo ""
 echo 6. 著作権
 cat spec_tyosakuken
 
-echo ""
 echo 7. 保証
 cat spec_hosyou
 
-echo ""
 echo 8. 秘密保持
 cat spec_himitsu
 
-echo ""
 echo 9. 遵守事項
 cat spec_junshu
 
-echo ""
 echo 10. 注意事項
 cat spec_tyuui
 
-echo ""
+echo $section
 echo II. 詳細仕様
 
-echo 1. 概要
+echo -n $section
+echo -n "1. 概要"
+echo -n $section
 cat spec_gyoumu_gaiyou
 
-echo ""
-echo 2. 詳細
+echo -n $section
+echo -n "2. 詳細"
+echo -n $section
 echo "　本業務の詳細を以下に定める。"
 cat spec_gyoumu_syousai
 
-echo ""
-echo 3. 別事業者との連携
+echo -n $section
+echo -n "3. 別事業者との連携"
 #echo 3. 引き継ぎ
+echo -n $section
 cat spec_gyoumu_renkei
 
-echo ""
-echo 4. 本業務の実施環境
+echo -n $section
+echo -n "4. 本業務の実施環境"
+echo -n $section
 cat spec_gyoumu_kankyo
 
-echo ""
-echo 5. 本業務に必要な技術要素
+echo -n $section
+echo -n "5. 本業務に必要な技術要素"
+echo -n $section
 cat spec_hituyou_gijutu
 
-echo ""
+echo $section
 echo "　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　以上。"
