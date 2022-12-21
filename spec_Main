@@ -22,32 +22,50 @@ echo -n "1. 件名"
 echo -n $section
 echo "　$title"
 
-echo 2. 実施目的
+echo -n $section
+echo -n "2. 実施目的"
+echo -n $section
 cat spec_mokuteki
 
-echo 3. 納品期限
+echo -n $section
+echo -n "3. 納品期限"
 #echo 3. 業務期間
+echo -n $section
 echo "　$kigen"
 
-echo 4. 納品物
+echo -n $section
+echo -n "4. 納品物"
+echo -n $section
 cat spec_nouhin
 
-echo 5. 要求仕様
+echo -n $section
+echo -n "5. 要求仕様"
+echo -n $section
 echo "　受注者は「II. 詳細仕様」に記載した業務を行うこと。"
 
-echo 6. 著作権
+echo -n $section
+echo -n "6. 著作権"
+echo -n $section
 cat spec_tyosakuken
 
-echo 7. 保証
+echo -n $section
+echo -n "7. 保証"
+echo -n $section
 cat spec_hosyou
 
-echo 8. 秘密保持
+echo -n $section
+echo -n "8. 秘密保持"
+echo -n $section
 cat spec_himitsu
 
-echo 9. 遵守事項
+echo -n $section
+echo -n "9. 遵守事項"
+echo -n $section
 cat spec_junshu
 
-echo 10. 注意事項
+echo -n $section
+echo -n "10. 注意事項"
+echo -n $section
 cat spec_tyuui
 
 echo $section
