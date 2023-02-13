@@ -11,7 +11,7 @@ spec_Main        spec_hituyou_gijutu    spec_tyuui
 spec_gyoumu_gaiyou    spec_hosyou
 
 ## 実行の流れイメージ
-
+<pre>
  +++++++++++++++++
  | create_doc.sh |
  +++++++++++++++++
@@ -35,3 +35,4 @@ spec_gyoumu_gaiyou    spec_hosyou
     ++++++++++++++++++
     | yyyy_mmdd.docx |
     ++++++++++++++++++
+</pre>
