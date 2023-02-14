@@ -7,7 +7,7 @@ dd="(\D)"
 
 ##本文
 echo ""
-echo "ID: $RCOSID"
+echo "$RCOSID"
 echo $dd
 echo $title
 echo "仕様書"
