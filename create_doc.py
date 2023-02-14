@@ -24,7 +24,7 @@ textdata = pretext[1]
 doc = Document()
 header_section = doc.sections[0].header
 ToDate = header_section.paragraphs[0]
-ToDate.text = str(TodayDate) + '\n' + RCOSID
+ToDate.text = str(TodayDate) + RCOSID
 ToDate.alignment = WD_TAB_ALIGNMENT.RIGHT
 
 doc.add_paragraph('')
