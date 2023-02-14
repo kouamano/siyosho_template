@@ -8,6 +8,7 @@ TodayDate = now_time.strftime('%Y/%m/%d')
 TodayFile = now_time.strftime('%Y_%m%d' + '.tmp')
 filename = now_time.strftime('%Y_%m%d' + '.docx')
 
+data_delimiter = '(\D)'
 section_delimiter = '(\S)'
 indent_block_delimiter = '(\I)'
 
@@ -15,12 +16,15 @@ f = open(TodayFile,'r')
 textdata = f.read()
 f.close()
 
-RCOSID = '[K-2023-1]'
+pretext = textdata.split(data_delimiter)
+
+RCOSID = pretext[0]
+textdata = pretext[1]
 
 doc = Document()
 header_section = doc.sections[0].header
 ToDate = header_section.paragraphs[0]
-ToDate.text = str(TodayDate) + '\n' + RCOSID
+ToDate.text = str(TodayDate) + RCOSID
 ToDate.alignment = WD_TAB_ALIGNMENT.RIGHT
 
 doc.add_paragraph('')
