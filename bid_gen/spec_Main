@@ -109,7 +109,7 @@ cat spec_gyoumu_kankyo
 echo -n $section
 echo -n "6. 本業務に必要な技術要素"
 echo -n $section
-cat spec_hituyou_gijutu
+cat spec_gyoumu_gijutu
 
 echo -n $section
 echo -n ""
