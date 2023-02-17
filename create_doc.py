@@ -30,10 +30,11 @@ ToDate.alignment = WD_TAB_ALIGNMENT.RIGHT
 doc.add_paragraph('')
 sections = textdata.split(section_delimiter)
 for item in sections:
+  current=doc.add_paragraph('')
   subsections = item.split(indent_block_delimiter)
   for subitem in subsections:
-    doc.add_paragraph(subitem)
-  #doc.add_paragraph(item)
+    #doc.add_paragraph(subitem)
+    current.add_run(subitem)
 doc.paragraphs[1].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
 doc.save(filename)
