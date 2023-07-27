@@ -8,25 +8,33 @@ TodayDate = now_time.strftime('%Y/%m/%d')
 TodayFile = now_time.strftime('%Y_%m%d' + '.tmp')
 filename = now_time.strftime('%Y_%m%d' + '.docx')
 
+data_delimiter = '(\D)'
 section_delimiter = '(\S)'
+indent_block_delimiter = '(\I)'
 
 f = open(TodayFile,'r')
 textdata = f.read()
 f.close()
 
-RCOSID = '[R-2022-XX]'
+pretext = textdata.split(data_delimiter)
+
+RCOSID = pretext[0]
+textdata = pretext[1]
 
 doc = Document()
 header_section = doc.sections[0].header
 ToDate = header_section.paragraphs[0]
-ToDate.text = str(TodayDate) + '\n' + RCOSID
+ToDate.text = str(TodayDate) + RCOSID
 ToDate.alignment = WD_TAB_ALIGNMENT.RIGHT
 
 doc.add_paragraph('')
 sections = textdata.split(section_delimiter)
 for item in sections:
-  doc.add_paragraph(item)
-#doc.add_paragraph(sections[0])
+  current=doc.add_paragraph('')
+  subsections = item.split(indent_block_delimiter)
+  for subitem in subsections:
+    #doc.add_paragraph(subitem)
+    current.add_run(subitem)
 doc.paragraphs[1].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
 doc.save(filename)

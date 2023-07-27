@@ -1,8 +1,15 @@
 #仕様書メインファイル
 ##変数
 title="タイトル"
+RCOSID="[K-2023-5]"
 kigen="2023年3月31日(金)"
 section="(\S)"
+dd="(\D)"
+
+##データ文
+echo ""
+echo $RCOSID
+echo $dd
 
 ##本文
 echo ""
@@ -10,9 +17,6 @@ echo $title
 echo "仕様書"
 echo "国立情報学研究所"
 echo ""
-
-echo $section
-echo "TODO: タイトル部をセンタリングし、この文を削除"
 
 echo $section
 echo I. 一般事項
